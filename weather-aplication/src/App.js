@@ -2,6 +2,7 @@ import "./App.css";
 import Search from "./Search";
 import axios from "axios";
 import React, { useState } from "react";
+import "flag-icon-css/css/flag-icons.min.css";
 
 function App() {
 	const [weatherData, setWeatherData] = useState(null);
@@ -27,6 +28,9 @@ function App() {
 				<div>
 					<h2>
 						Pogoda dla: {weatherData.name}, {weatherData.sys.country}
+						<span
+							className={`flag-icon flag-icon-${weatherData.sys.country.toLowerCase()}`}
+						></span>
 					</h2>
 					<p>Temperatura: {weatherData.main.temp}°C</p>
 					<p>Warunki: {weatherData.weather[0].description}</p>

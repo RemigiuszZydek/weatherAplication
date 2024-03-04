@@ -1,4 +1,84 @@
+body {
+	font-family: "Arial", sans-serif;
+	background-color: #464035; /* Główne tło */
+	color: #c5a46a; /* Kolor tekstu */
+	line-height: 1.6;
+	padding: 20px;
+}
+
+.App {
+	max-width: 600px;
+	margin: 20px auto;
+	background: #332b1e; /* Tło kontenera aplikacji */
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.App-header {
+	color: #efb758; /* Kolor nagłówka */
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+form {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+
+input[type="text"] {
+	flex: 1;
+	padding: 10px;
+	margin-right: 10px;
+	border: 2px solid #9b8a6d; /* Kolor obramowania input */
+	border-radius: 4px;
+	color: #332b1e;
+	background-color: #706b62; /* Tło input */
+}
+
+button {
+	padding: 10px 20px;
+	border: none;
+	border-radius: 4px;
+	background-color: #efb758; /* Tło przycisku */
+	color: #332b1e; /* Kolor tekstu przycisku */
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+button:hover {
+	background-color: #c5a46a; /* Kolor tła przycisku przy najechaniu */
+}
+
 .error {
-	color: red;
+	color: #efb758; /* Kolor komunikatu o błędzie */
+	text-align: center;
 	margin-top: 20px;
+}
+
+.weather-info {
+	background-color: #9b8a6d; /* Tło informacji o pogodzie */
+	padding: 20px;
+	border-radius: 8px;
+	margin-top: 20px;
+	color: #332b1e; /* Kolor tekstu informacji o pogodzie */
+	text-align: center;
+}
+
+/* Responsywność */
+@media (max-width: 600px) {
+	.App {
+		padding: 15px;
+	}
+
+	form {
+		flex-direction: column;
+	}
+
+	input[type="text"],
+	button {
+		width: 100%;
+		margin: 5px 0;
+	}
 }
