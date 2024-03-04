@@ -37,6 +37,7 @@ function App() {
 					<p>Wilgotność: {weatherData.main.humidity}%</p>
 					<p>Wiatr: {weatherData.wind.speed} m/s</p>
 					<img
+						className="icon"
 						src={`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}.png`}
 						alt="Weather icon"
 					/>
