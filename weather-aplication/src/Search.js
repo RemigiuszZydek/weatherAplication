@@ -1,0 +1,23 @@
+import React, { useState } from "react";
+
+function Search({ onSearch }) {
+	const [city, setCity] = useState("");
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		onSearch(city);
+	};
+
+	return (
+		<form onSubmit={handleSubmit}>
+			<input
+				type="text"
+				value={city}
+				onChange={(e) => setCity(e.target.value)}
+				placeholder="Wpisz miasto"
+			/>
+			<button type="submit">Szukaj</button>
+		</form>
+	);
+}
+
+export default Search;
